@@ -1,0 +1,12 @@
+CONTAINERNAME="myContainerName"
+REVERSEURL="myreverseUrl.com"
+HOSTPORT="8080"
+
+#Stop previous session and delete image
+docker stop $CONTAINERNAME && docker rm $CONTAINERNAME
+
+#build image of server web under DEBIAN with docker file
+docker build -t web-serv-php7/shared:v1 -f Dockerfile .;
+
+#run image
+docker run --name $CONTAINERNAME --env VIRTUAL_HOST=$REVERSEURL -p $HOSTPORT:80 -d  -v $PWD/php.ini:/etc/php5/apache2/php.ini -v $PWD/www:/var/www web-serv-php7/shared:v1 /usr/sbin/apache2ctl -D FOREGROUND && echo Done
