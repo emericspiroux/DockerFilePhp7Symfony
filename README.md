@@ -1,8 +1,8 @@
 # DockerFilePhp7Symfony
-it's a tool to install a symfony (or other php friendly) application with docker very quickly on your server.
+it's a tool to install a symfony (or other php7 friendly) application with docker very quickly on your server.
 
 ## Step 1
-Change `ServerName` and `Hostname` in Dockerfile.
+Change `ServerName` and `Hostname` in `./Dockerfile`.
 
 ## Step 2
 Change Shell variable at your convenience into `./launch_server`. 
