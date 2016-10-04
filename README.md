@@ -17,7 +17,8 @@ use `./launch_server` to start running your apache in php 7.0 !
 
 ## Step 4
 Go to `<myIpAddress>:8080`
-If it's work :
+
+### If you see "It's work" and your php infos do this next steps:
 
 ## Step 5
 Put your website code into www or web if it's not for symfony.
